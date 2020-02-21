@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Movie Catalog</string>
+
+    <string name="tab_text_1">Movies</string>
+    <string name="tab_text_2">TV Show</string>
+
+    <string name="imageview">Poster</string>
+    <string name="tittle">Dicoding</string>
+    <string name="rating_bar">4.5</string>
+    <string name="tittle_overview">Overview</string>
+    <string name="tittlegenres">Genres</string>
+    <string name="tittle_popular">Most Popular Movies</string>
+    <string name="tittle_populartv">Most Popular TV Show</string>
+    <string name="year">0000</string>
+    <string name="eps">Eps.</string>
+    <string name="episodes">Episodes</string>
+    <string name="seasons">Seasons</string>
+    <string name="season">/S.</string>
+
+    <string name="exittap">Tap twice to exit</string>
+
+    <string name="nav_header_title">Yogi Dwi Andrian</string>
+    <string name="nav_header_subtitle">yogicloud11@gmail.com</string>
+
+    <string name="menu_search">Search</string>
+    <string name="menu_bookmark">Bookmark</string>
+    <string name="menu_language">Language</string>
+
+    <string name="menu_pro_version">Buy Pro Version</string>
+    <string name="menu_rate">Rate on Google Play</string>
+    <string name="menu_feedback">Feedback</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_tittle">Support App</string>
+
+    <string name="click_search">Search clicked</string>
+    <string name="click_bookmark">Bookmark clicked</string>
+    <string name="click_proversion">Buy Pro Version clicked</string>
+    <string name="click_rate">Rate on Google Play clicked</string>
+    <string name="click_feedback">Feedback clicked</string>
+    <string name="click_share">Share clicked</string>
+</resources>

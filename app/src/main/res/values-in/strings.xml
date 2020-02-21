@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Katalog Film</string>
+
+    <string name="tab_text_1">Film</string>
+    <string name="tab_text_2">Acara TV</string>
+
+    <string name="imageview">Poster</string>
+    <string name="tittle">Dicoding</string>
+    <string name="rating_bar">4.5</string>
+    <string name="tittle_overview">Deskripsi</string>
+    <string name="tittlegenres">Genre</string>
+    <string name="tittle_popular">Film Paling Populer</string>
+    <string name="tittle_populartv">Acara TV Terpopuler</string>
+    <string name="year">0000</string>
+    <string name="eps">Eps.</string>
+    <string name="episodes">Episode</string>
+    <string name="seasons">Seri</string>
+    <string name="season">/S.</string>
+
+    <string name="exittap">Ketuk dua kali untuk keluar</string>
+
+    <string name="nav_header_title">Yogi Dwi Andrian</string>
+    <string name="nav_header_subtitle">yogicloud11@gmail.com</string>
+
+    <string name="menu_search">Cari</string>
+    <string name="menu_bookmark">Bookmark</string>
+    <string name="menu_language">Bahasa</string>
+    <string name="menu_pro_version">Beli Versi Pro</string>
+    <string name="menu_rate">Nilai di Google Play</string>
+    <string name="menu_feedback">Umpan Balik</string>
+    <string name="menu_share">Bagi</string>
+    <string name="menu_tittle">Mendukung Aplikasi</string>
+
+    <string name="click_search">Cari dipilih</string>
+    <string name="click_bookmark">Penanda dipilih</string>
+    <string name="click_proversion">Beli Versi Berbayar dipilih</string>
+    <string name="click_rate">Beri Rating Di Play Store dipilih</string>
+    <string name="click_feedback">Umpan Balik dipilih</string>
+    <string name="click_share">Bagi dipilih</string>
+</resources>
