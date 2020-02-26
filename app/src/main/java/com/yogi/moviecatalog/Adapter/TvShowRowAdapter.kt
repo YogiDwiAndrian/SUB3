@@ -17,7 +17,6 @@ import com.yogi.moviecatalog.Models.ResultTVShow
 import com.yogi.moviecatalog.R
 import com.yogi.moviecatalog.Ui.DetailTvShowActivity
 import com.yogi.moviecatalog.Ui.Fragment.TVShowFragment
-import com.yogi.moviecatalog.Utils.Constants
 import kotlinx.android.synthetic.main.item_row_tvshow.view.*
 import java.text.SimpleDateFormat
 
@@ -27,6 +26,11 @@ class TvShowRowAdapter(private val context: TVShowFragment, private var resultTV
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TvShowViewHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_row_tvshow, parent, false)
         return TvShowViewHolder(view)
+    }
+
+    fun update(data: ArrayList<ResultTVShow>) {
+        resultTVShowTheMovieDb = data
+        notifyDataSetChanged()
     }
 
     @SuppressLint("SimpleDateFormat")
@@ -48,13 +52,6 @@ class TvShowRowAdapter(private val context: TVShowFragment, private var resultTV
         simpleDateFormat = SimpleDateFormat("yyyy")
         holder.tvYear.text = simpleDateFormat.format(convertDate)
 
-        for (j in 0 until resultItem.genreIds!!.size) {
-            if(j==resultItem.genreIds.size-1)
-                resultItem.genreString += Constants.getGenreTV(resultItem.genreIds.get(j))
-            else
-                resultItem.genreString += Constants.getGenreTV(resultItem.genreIds.get(j))+", "
-        }
-        holder.tvGenres.text = resultItem.genreString
 
 
         //send parcelable data intent
@@ -79,11 +76,5 @@ class TvShowRowAdapter(private val context: TVShowFragment, private var resultTV
         var tvTittle: TextView = itemView.tv_tittle_tvshow
         var tvRateBar: RatingBar = itemView.ratingBar_tvshow
         var tvRateNum: TextView = itemView.tv_rate_tvshow
-        var tvGenres: TextView = itemView.tv_genres_tvshow
-    }
-
-    fun refreshAdapter(resultTVShowTheMovieDb: List<ResultTVShow>) {
-        this.resultTVShowTheMovieDb.addAll(resultTVShowTheMovieDb)
-        notifyItemRangeChanged(0, this.resultTVShowTheMovieDb.size)
     }
 }

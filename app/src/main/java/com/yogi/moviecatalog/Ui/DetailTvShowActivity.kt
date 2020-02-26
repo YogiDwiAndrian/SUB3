@@ -18,7 +18,6 @@ import com.yogi.moviecatalog.BuildConfig
 import com.yogi.moviecatalog.Models.ObjectResultTVShow
 import com.yogi.moviecatalog.Models.ResultTVShow
 import com.yogi.moviecatalog.R
-import com.yogi.moviecatalog.Utils.Constants
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_detail_tv_show.*
@@ -92,19 +91,6 @@ class DetailTvShowActivity : AppCompatActivity() {
         val overview = tvshow.overview
         tvOverview.text = overview
 
-        //change genres
-        val tvGenres: TextView = tv_detail_genres_tvshow
-        for (j in 0 until tvshow.genreIds!!.size) {
-            if(j==tvshow.genreIds.size-1)
-                tvshow.genreString += Constants.getGenreTV(tvshow.genreIds.get(j))
-            else
-                tvshow.genreString += Constants.getGenreTV(tvshow.genreIds.get(j))+", "
-        }
-        val genres = tvshow.genreString
-        tvGenres.text = genres
-
-
-
         page = 1
         totalPage = 0
         doLoadData()
@@ -123,7 +109,7 @@ class DetailTvShowActivity : AppCompatActivity() {
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()
         val apiTheMovieDb = retrofit.create(ApiTheMovieDb::class.java)
-        apiTheMovieDb.getPopularTVShow(page = page)
+        apiTheMovieDb.getPopularTVShow()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(

@@ -15,7 +15,6 @@ import com.yogi.moviecatalog.Models.ResultMovie
 import com.yogi.moviecatalog.R
 import com.yogi.moviecatalog.Ui.DetailMovieActivity
 import com.yogi.moviecatalog.Ui.Fragment.MoviesFragment
-import com.yogi.moviecatalog.Utils.Constants
 import java.text.SimpleDateFormat
 
 @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
@@ -53,14 +52,6 @@ class MovieRowAdapter(private val context: MoviesFragment, private var resultMov
         simpleDateFormat = SimpleDateFormat("yyyy")
         holder.tvYear.text = simpleDateFormat.format(convertDate)
 
-        for (j in 0 until resultItem.genreIds!!.size) {
-            if(j==resultItem.genreIds.size-1)
-                resultItem.genreString += Constants.getGenre(resultItem.genreIds.get(j))
-            else
-                resultItem.genreString += Constants.getGenre(resultItem.genreIds.get(j))+", "
-        }
-        holder.tvGenres.text = resultItem.genreString
-
         //send parcelable data intent
         holder.itemView.setOnClickListener {
 
@@ -83,7 +74,5 @@ class MovieRowAdapter(private val context: MoviesFragment, private var resultMov
         var tvTittle: TextView = itemView.findViewById(R.id.tv_tittle)
         var tvRateBar: RatingBar = itemView.findViewById(R.id.ratingBar)
         var tvRateNum: TextView = itemView.findViewById(R.id.tv_rate)
-        var tvGenres: TextView = itemView.findViewById(R.id.tv_genres)
-
     }
 }

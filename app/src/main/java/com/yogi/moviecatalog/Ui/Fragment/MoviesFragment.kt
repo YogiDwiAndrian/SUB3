@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.yogi.moviecatalog.Adapter.MovieRowAdapter
 import com.yogi.moviecatalog.Models.ResultMovie
 import com.yogi.moviecatalog.R
-import com.yogi.moviecatalog.ViewModels.MainViewModelMovie
+import com.yogi.moviecatalog.ViewModels.ViewModelMovie
 
 
 /**
@@ -21,7 +21,7 @@ import com.yogi.moviecatalog.ViewModels.MainViewModelMovie
  */
 class MoviesFragment : Fragment() {
 
-    private lateinit var movieViewModel: MainViewModelMovie
+    private lateinit var movieViewModel: ViewModelMovie
     private lateinit var root: View
     private lateinit var adapter : MovieRowAdapter
     private lateinit var rvMovies: RecyclerView
@@ -33,11 +33,11 @@ class MoviesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         movieViewModel =
-            ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(MainViewModelMovie::class.java)
+            ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(ViewModelMovie::class.java)
         root = inflater.inflate(R.layout.fragment_movies, container, false)
 
         adapter = MovieRowAdapter(this , listItems)
-        adapter.notifyDataSetChanged()
+
 
         movieViewModel.setMovies()
         movieViewModel.getMovie().observe(this, Observer {

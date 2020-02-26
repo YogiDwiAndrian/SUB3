@@ -18,7 +18,6 @@ interface ApiTheMovieDb {
     @GET("tv/on_the_air")
     fun getPopularTVShow(
         @Query("api_key") apiKey: String = BuildConfig.API_KEY,
-        @Query("language") language: String = BuildConfig.LANGUAGE,
-        @Query("page") page: Int
+        @Query("language") language: String = BuildConfig.LANGUAGE
     ): Observable<ObjectResultTVShow>
 }

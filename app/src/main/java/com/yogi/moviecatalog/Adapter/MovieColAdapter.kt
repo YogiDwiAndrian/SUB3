@@ -20,7 +20,6 @@ import java.text.SimpleDateFormat
 @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class MovieColAdapter (private val context: DetailMovieActivity, private var resultMovieTheMovieDb: ArrayList<ResultMovie>) : RecyclerView.Adapter<MovieColAdapter.CardViewViewHolder>() {
 
-    private val TAG = javaClass.simpleName
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewViewHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_col_movie, parent, false)

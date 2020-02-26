@@ -91,10 +91,6 @@ class DetailMovieActivity : AppCompatActivity() {
         val overview = movies.overview
         tvOverview.text = overview
 
-        //change genres
-        val tvGenres: TextView = tv_detail_genres
-        val genres = movies.genreString
-        tvGenres.text = genres
 
         page = 1
         totalPage = 0
