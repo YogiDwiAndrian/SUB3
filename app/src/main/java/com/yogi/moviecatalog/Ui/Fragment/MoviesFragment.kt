@@ -41,6 +41,7 @@ class MoviesFragment : Fragment() {
 
         movieViewModel.setMovies()
         movieViewModel.getMovie().observe(this, Observer {
+            listItems.clear()
             listItems.addAll(it)
             adapter.update(listItems)
         })

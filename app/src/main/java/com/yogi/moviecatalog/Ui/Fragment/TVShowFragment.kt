@@ -54,6 +54,7 @@ class TVShowFragment : Fragment() {
 
         tvshowViewModel.setTvShow()
         tvshowViewModel.getTvShow().observe(this, Observer {
+            listItems.clear()
             listItems.addAll(it)
             adapter.update(listItems)
         })
